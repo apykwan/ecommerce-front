@@ -35,7 +35,9 @@ const Home = () => {
     useEffect(() => {
         loadProductsByArrival();
         loadProductsBySell();
-    }, [])
+    }, []);
+
+    console.log(productsByArrival.map(product => product.createdAt.split('-')))
 
     return (
         <Layout
@@ -47,7 +49,7 @@ const Home = () => {
             <h2 className="mb-4">Best Seller</h2>
             <div className="row">
                 {productsBySell.map((product, idx) => (
-                    <div key={idx} className="col-4 mb-3">
+                    <div key={idx} className="col-12 col-md-4 mb-3">
                         <Card product={product} />
                     </div>
                 ))}
@@ -56,7 +58,7 @@ const Home = () => {
             <h2 className="mb-4">New Arrival</h2>
             <div className="row">
                 {productsByArrival.map((product, idx) => (
-                    <div key={idx} className="col-4 mb-3">
+                    <div key={idx} className="col-12 col-md-4 mb-3">
                         <Card product={product} />
                     </div>
                 ))}

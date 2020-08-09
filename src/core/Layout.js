@@ -10,7 +10,9 @@ const Layout = ({
     children 
 }) => (
     <div>
-        <Menu />
+        <div style={{position: 'fixed', overflow: 'hidden', width: '100%', top:'0', zIndex: 5}}>
+            <Menu />
+        </div>
         <div className="jumbotron">
             <h2>{title}</h2>
             <p className="lead">{description}</p>

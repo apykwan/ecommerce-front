@@ -52,7 +52,6 @@ const Dashboard = () => {
                     <li className="list-group-item">
                         {role === 1 ? "Admin" : "Registered User"}
                     </li>
-                    <li className="list-group-item">{token}</li>
                 </ul>
             </div>
         )
